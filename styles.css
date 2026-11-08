@@ -82,3 +82,9 @@
     outline-offset: 3px;
   }
 }
+
+/* Mobile: remove decorative rule following MADE IN NEPAL. */
+@media (max-width: 800px) { .hero-copy > .eyebrow span { display: none; } }
+
+/* Center MADE IN NEPAL on mobile without changing other layouts. */
+@media (max-width: 800px) { .hero-copy > .eyebrow { width: 100%; justify-content: center; text-align: center; } }

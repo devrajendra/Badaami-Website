@@ -36,3 +36,8 @@ Viewport-fit update: removed fixed 850px hero minimum, reduced desktop hero cont
 
 ## Cinematic mobile image reveal
 Mobile only: photo and overlay gently settle over 1.8 seconds; all content (including the WhatsApp link) is visible and clickable from the start. No spacing, sizing, or layout rules were changed. Reduced-motion preferences disable animation. The previous approved version is `badaami-github-mobile-centered-label.zip`.
+
+
+## Floating-label mobile preview
+
+The approved layout geometry and desktop design are unchanged. Mobile only: the full-screen cream overlay and cinematic reveal are removed; small translucent panels behind text preserve readability while the original chocolate photograph shows at full contrast. WhatsApp and phone links remain live.

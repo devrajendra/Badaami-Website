@@ -124,3 +124,11 @@
 @media (max-width: 800px) {
   .hero-copy > .eyebrow span.nepal-flag { display: inline-block; font-size: 16px; line-height: 1; margin-left: 3px; }
 }
+
+/* Flag is an SVG, not an OS-dependent emoji. Override the original decorative rule. */
+.hero-copy > .eyebrow span.nepal-flag { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; width: 17px; height: 21px; margin: 0; background: none; }
+.hero-copy > .eyebrow span.nepal-flag img { display: block; width: 17px; height: 21px; max-width: none; }
+@media (max-width: 800px) {
+  .hero-copy > .eyebrow { gap: 6px; white-space: nowrap; }
+  .hero-copy > .eyebrow span.nepal-flag { width: 17px; height: 21px; margin: 0; }
+}

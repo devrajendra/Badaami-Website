@@ -88,3 +88,34 @@
 
 /* Center MADE IN NEPAL on mobile without changing other layouts. */
 @media (max-width: 800px) { .hero-copy > .eyebrow { width: 100%; justify-content: center; text-align: center; } }
+
+/* Cinematic image reveal: visual effects only; no layout/spacing changes. */
+@media (max-width: 800px) {
+  /* Let the chocolate show through, while retaining a readable warm wash. */
+  .hero:after {
+    background: linear-gradient(180deg, rgba(248,232,217,.72) 0%, rgba(248,232,217,.79) 44%, rgba(248,232,217,.88) 100%);
+    animation: badaami-overlay-settle 1.8s ease-out both;
+  }
+  .hero-photo { animation: badaami-photo-arrive 1.8s ease-out both; }
+  /* Content starts readable and interactive, then settles into full contrast. */
+  .hero-copy > .eyebrow, .hero-copy > h1, .hero-copy > .intro,
+  .hero-copy > .stockist, .hero-copy > .order-group {
+    animation: badaami-content-settle 1.6s ease-out both;
+  }
+  .hero-copy > .order-group { animation-duration: 1.2s; }
+}
+@keyframes badaami-photo-arrive { from { filter: saturate(1.12) contrast(1.07); } to { filter: saturate(1.04) contrast(1.03); } }
+@keyframes badaami-overlay-settle {
+  from { opacity: .68; }
+  to { opacity: 1; }
+}
+@keyframes badaami-content-settle {
+  from { opacity: .82; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero:after, .hero-photo, .hero-copy > .eyebrow, .hero-copy > h1,
+  .hero-copy > .intro, .hero-copy > .stockist, .hero-copy > .order-group {
+    animation: none !important;
+  }
+}

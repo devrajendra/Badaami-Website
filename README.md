@@ -33,3 +33,6 @@ Viewport-fit update: removed fixed 850px hero minimum, reduced desktop hero cont
 - Removed the “Made in Nepal” eyebrow above the homepage headline on desktop.
 - Improved Home / About Us navigation contrast using a dark chocolate background with cream text.
 - Mobile styles and layout remain unchanged.
+
+## Cinematic mobile image reveal
+Mobile only: photo and overlay gently settle over 1.8 seconds; all content (including the WhatsApp link) is visible and clickable from the start. No spacing, sizing, or layout rules were changed. Reduced-motion preferences disable animation. The previous approved version is `badaami-github-mobile-centered-label.zip`.

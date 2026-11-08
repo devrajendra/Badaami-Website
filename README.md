@@ -28,3 +28,8 @@ Mobile update: Hero copy is center-aligned and vertically balanced within the in
 
 
 Viewport-fit update: removed fixed 850px hero minimum, reduced desktop hero content, and centered mobile content within 100svh without blank bottom space.
+
+### Latest desktop-only adjustment
+- Removed the “Made in Nepal” eyebrow above the homepage headline on desktop.
+- Improved Home / About Us navigation contrast using a dark chocolate background with cream text.
+- Mobile styles and layout remain unchanged.

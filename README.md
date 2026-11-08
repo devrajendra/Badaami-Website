@@ -23,3 +23,8 @@ The chocolate hero image is a cropped AI-generated concept visual. It is not a p
 
 ## Mobile homepage update
 The mobile hero now places the headline, Nina and Hagar availability, WhatsApp order button, and call number near the top of the first screen. On short-height phones, the secondary description is hidden to prioritize those actions. Refresh the deployed page after replacing `styles.css` to see the changes.
+
+Mobile update: Hero copy is center-aligned and vertically balanced within the initial viewport. Shorter screens use compact spacing.
+
+
+Viewport-fit update: removed fixed 850px hero minimum, reduced desktop hero content, and centered mobile content within 100svh without blank bottom space.

@@ -89,51 +89,33 @@
 /* Center MADE IN NEPAL on mobile without changing other layouts. */
 @media (max-width: 800px) { .hero-copy > .eyebrow { width: 100%; justify-content: center; text-align: center; } }
 
-
-/* Mobile floating panels: paint-only overrides. All existing dimensions,
-   spacing, alignment and viewport-fit rules above are retained unchanged. */
+/* Cinematic image reveal: visual effects only; no layout/spacing changes. */
 @media (max-width: 800px) {
-  /* No full-screen cream wash; photograph retains its natural contrast. */
-  .hero:after { background: transparent; animation: none; }
-  .hero-photo { filter: none; animation: none; }
-  .hero-copy > .eyebrow,
-  .hero-copy > h1,
-  .hero-copy > .intro,
-  .hero-copy > .stockist,
-  .hero-copy > .order-group { animation: none; opacity: 1; }
-  /* Separate floating labels rather than one large obscuring card. */
-  .hero-copy > .eyebrow {
-    color: #34180f;
-    background: rgba(255, 246, 233, .88);
-    border-radius: 999px;
-    box-shadow: 0 2px 16px rgba(44, 19, 11, .11);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+  /* Let the chocolate show through, while retaining a readable warm wash. */
+  .hero:after {
+    background: linear-gradient(180deg, rgba(248,232,217,.72) 0%, rgba(248,232,217,.79) 44%, rgba(248,232,217,.88) 100%);
+    animation: badaami-overlay-settle 1.8s ease-out both;
   }
-  .hero-copy > h1 {
-    color: #35180f;
-    background: rgba(255, 247, 234, .88);
-    border-radius: 16px;
-    box-shadow: 0 4px 25px rgba(44, 19, 11, .13);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    text-shadow: 0 1px 1px rgba(255,255,255,.4);
+  .hero-photo { animation: badaami-photo-arrive 1.8s ease-out both; }
+  /* Content starts readable and interactive, then settles into full contrast. */
+  .hero-copy > .eyebrow, .hero-copy > h1, .hero-copy > .intro,
+  .hero-copy > .stockist, .hero-copy > .order-group {
+    animation: badaami-content-settle 1.6s ease-out both;
   }
-  .hero-copy > .intro {
-    color: #35180f;
-    background: rgba(255, 247, 234, .89);
-    border-radius: 10px;
-    box-shadow: 0 2px 14px rgba(44, 19, 11, .1);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+  .hero-copy > .order-group { animation-duration: 1.2s; }
+}
+@keyframes badaami-photo-arrive { from { filter: saturate(1.12) contrast(1.07); } to { filter: saturate(1.04) contrast(1.03); } }
+@keyframes badaami-overlay-settle {
+  from { opacity: .68; }
+  to { opacity: 1; }
+}
+@keyframes badaami-content-settle {
+  from { opacity: .82; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero:after, .hero-photo, .hero-copy > .eyebrow, .hero-copy > h1,
+  .hero-copy > .intro, .hero-copy > .stockist, .hero-copy > .order-group {
+    animation: none !important;
   }
-  .stockist { box-shadow: 0 7px 24px rgba(33, 12, 7, .34); }
-  .wa-button { box-shadow: 0 7px 24px rgba(8, 64, 25, .35); }
-  .call-line, .phone {
-    color: #35180f;
-    background: rgba(255, 247, 234, .9);
-    border-radius: 999px;
-    text-shadow: none;
-  }
-  .call-line:before, .call-line:after { background: #9c704e; }
 }

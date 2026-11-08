@@ -20,3 +20,6 @@ The site requires no build step. The homepage is `index.html`.
 WhatsApp and phone: +977 9709132802. Retail: Nina and Hagar, Gairidhara and Jhamsikhel.
 
 The chocolate hero image is a cropped AI-generated concept visual. It is not a photograph of the actual Badaami product. Replace with approved product photography if needed.
+
+## Mobile homepage update
+The mobile hero now places the headline, Nina and Hagar availability, WhatsApp order button, and call number near the top of the first screen. On short-height phones, the secondary description is hidden to prioritize those actions. Refresh the deployed page after replacing `styles.css` to see the changes.
